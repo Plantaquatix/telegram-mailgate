@@ -1,0 +1,22 @@
+[loggers]
+keys=root
+
+[handlers]
+keys=syslog
+
+[formatters]
+keys=syslog
+
+[logger_root]
+level=DEBUG
+handlers=syslog
+qualname=telegram-mailgate
+
+[handler_syslog]
+class=handlers.SysLogHandler
+level=DEBUG
+args=('/dev/log', handlers.SysLogHandler.LOG_MAIL)
+formatter=syslog
+
+[formatter_syslog]
+format=telegram-mailgate[%(process)d]: %(message)s

@@ -1,0 +1,11 @@
+[core]
+# Specify the config file for logging
+logging_conf_file=/etc/telegram-mailgate/logging.cf
+
+# Specify the mapping file for aliases
+# This file contains the recipient and the chat ID separated by a space on each line
+aliases=/etc/telegram-mailgate/aliases
+
+[api]
+# Specify your API key here
+key=
